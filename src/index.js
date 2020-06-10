@@ -5,3 +5,13 @@ export function fetchMovies() {
     return fetchWithTimeout(1000)
     .then(resolveFunction);
 }
+
+const moviePromise = fetchMovies();
+
+moviePromise.then(result => console.log(result));
+
+// export async function fetchMovies() {
+//     const resolveFunction = () => movies;
+//     const result = await fetchWithTimeout(1000);
+//     return resolveFunction(result);
+// }
