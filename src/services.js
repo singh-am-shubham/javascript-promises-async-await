@@ -15,6 +15,15 @@ export function fetchBooks() {
     .catch((error) => console.log(error));
 }
 
+export async function asyncFetchMovies() {
+  try {
+    const response = await fetch("./data/movies.json");
+    const results = await response.json();
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 // export async function fetchMovies(){
 //     try {
 //         const response = await fetch("./data/movies.json");
